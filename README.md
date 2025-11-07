@@ -5,9 +5,17 @@
 ```
 1.Where we are using #include<stdio.h> which includes the input,output as well as printf
 
-2.where every C program starts from int main() where it return the integer value
+2.Creates an array of strings.
 
-3. by using the printf we are proceeding
+3.Stores the number of steps
+
+4.Loops through all steps using index i.
+
+5.Prints each string 
+
+6.Prints the final message.
+
+
 
 ```
 
@@ -15,23 +23,27 @@
 ```
 #include <stdio.h>
 
-int main() 
+int main()
 {
-    printf("The Sequence Thinker – The Robot Tea Maker\n");
+    char *sequence[] =
+{
+        "Boil the water",
+        "Add tea powder and sugar",
+        "Add milk",
+        "Boil for a while",
+        "Turn off the flame",
+        "Strain off and serve"
+    };
 
-    printf("Step 1: Take a kettle and fill it with water.\n");
-    printf("Step 2: Switch on the stove and place the kettle on i.\n");
-    printf("Step 3: Wait until the water starts boiling.\n");
-    printf("Step 4: Add tea leaves to the boiling water.\n");
-    printf("Step 5: Add sugar as per taste.\n");
-    printf("Step 6: Pour some milk into the mixture.\n");
-    printf("Step 7: Allow the tea to boil for a few minutes.\n");
-    printf("Step 8: Turn off the stove.\n");
-    printf("Step 9: Use a strainer to filter the tea into a cup.\n");
-    printf("Step 10: Serve the hot tea.\n");
+    int length = 6;  
+    for (int i = 0; i < length; i++)
+{
+        printf("%s\n\n", sequence[i]);
+    }
 
-    printf("\nTea making process completed successfully!\n");
+    printf("Tea is ready!!\n");
 
     return 0;
 }
+
 ```
